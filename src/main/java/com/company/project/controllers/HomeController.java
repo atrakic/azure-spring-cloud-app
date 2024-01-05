@@ -15,7 +15,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String showHome(String name, Model model) {
-        Greeting dockerGreeting = repository.findById(1).orElse(new Greeting("Not Found 😕"));
+        Greeting dockerGreeting = repository.findById(1).orElse(new Greeting("Not Found"));
         model = model.addAttribute("name", dockerGreeting.getName());
         return "home";
     }

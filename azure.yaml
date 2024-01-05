@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: azure-spring-cloud-app
+metadata:
+  template: azure-spring-cloud-app@0.0.1-beta
+services:
+  backend:
+    project: .
+    dist: target
+    language: java
+    host: springboot
+infra:
+  provider: terraform
